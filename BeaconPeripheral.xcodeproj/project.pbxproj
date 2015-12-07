@@ -14,6 +14,9 @@
 		CE5A3FF01C157409006C9B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5A3FEE1C157409006C9B9A /* LaunchScreen.storyboard */; };
 		CE5A3FFB1C157409006C9B9A /* BeaconPeripheralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A3FFA1C157409006C9B9A /* BeaconPeripheralTests.swift */; };
 		CE5A40061C157409006C9B9A /* BeaconPeripheralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A40051C157409006C9B9A /* BeaconPeripheralUITests.swift */; };
+		CE5A40141C15758A006C9B9A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A40131C15758A006C9B9A /* CoreBluetooth.framework */; };
+		CE5A40171C1577B7006C9B9A /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A40161C1577B7006C9B9A /* PeripheralManager.swift */; };
+		CE5A40191C157844006C9B9A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5A40181C157844006C9B9A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		CE5A40011C157409006C9B9A /* BeaconPeripheralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconPeripheralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5A40051C157409006C9B9A /* BeaconPeripheralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconPeripheralUITests.swift; sourceTree = "<group>"; };
 		CE5A40071C157409006C9B9A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE5A40131C15758A006C9B9A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CE5A40161C1577B7006C9B9A /* PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralManager.swift; sourceTree = "<group>"; };
+		CE5A40181C157844006C9B9A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5A40141C15758A006C9B9A /* CoreBluetooth.framework in Frameworks */,
+				CE5A40191C157844006C9B9A /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CE5A3FE41C157409006C9B9A /* BeaconPeripheral */,
+				CE5A40151C157590006C9B9A /* Frameworks */,
 				CE5A3FF91C157409006C9B9A /* BeaconPeripheralTests */,
 				CE5A40041C157409006C9B9A /* BeaconPeripheralUITests */,
 				CE5A3FE31C157409006C9B9A /* Products */,
@@ -99,6 +108,7 @@
 			children = (
 				CE5A3FE51C157409006C9B9A /* AppDelegate.swift */,
 				CE5A3FE71C157409006C9B9A /* ViewController.swift */,
+				CE5A40161C1577B7006C9B9A /* PeripheralManager.swift */,
 				CE5A3FE91C157409006C9B9A /* Main.storyboard */,
 				CE5A3FEC1C157409006C9B9A /* Assets.xcassets */,
 				CE5A3FEE1C157409006C9B9A /* LaunchScreen.storyboard */,
@@ -123,6 +133,15 @@
 				CE5A40071C157409006C9B9A /* Info.plist */,
 			);
 			path = BeaconPeripheralUITests;
+			sourceTree = "<group>";
+		};
+		CE5A40151C157590006C9B9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A40131C15758A006C9B9A /* CoreBluetooth.framework */,
+				CE5A40181C157844006C9B9A /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE5A40171C1577B7006C9B9A /* PeripheralManager.swift in Sources */,
 				CE5A3FE81C157409006C9B9A /* ViewController.swift in Sources */,
 				CE5A3FE61C157409006C9B9A /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +504,7 @@
 				CE5A400C1C157409006C9B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5A400D1C157409006C9B9A /* Build configuration list for PBXNativeTarget "BeaconPeripheralTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +513,7 @@
 				CE5A400F1C157409006C9B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE5A40101C157409006C9B9A /* Build configuration list for PBXNativeTarget "BeaconPeripheralUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +522,7 @@
 				CE5A40121C157409006C9B9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
