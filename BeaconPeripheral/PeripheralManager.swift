@@ -15,7 +15,11 @@ class PeripheralManager: CBPeripheralManager {
     private let beaconIdentifier = ""
     private let uuidString = ""
 
+    /**
+     ペリフェラルとしてアドバタイジングを開始する
+     */
     static func startAdvertising() {
+        // delegateに代入すると CBPeripheralManagerDelegate のメソッドが呼び出される
         sharedInstance.delegate = sharedInstance
     }
 }
@@ -51,6 +55,11 @@ extension PeripheralManager: CBPeripheralManagerDelegate {
         }
     }
 
+    /**
+     ペリフェラルとしてアドバタイジングを開始する
+
+     - parameter manager: CBPeripheralManagerDelegate から受け取れる CBPeripheralManager
+     */
     private func startAdvertisingWithPeripheralManager(manager: CBPeripheralManager) {
         guard let proximityUUID = NSUUID(UUIDString: uuidString) else {
             return
